@@ -1,5 +1,5 @@
 
-# Reproducing tGrpup Equivariant CNN's( PDO-Econv) on Mnist dataset
+# Reproducing Group Equivariant CNN's( PDO-Econv) on Mnist dataset
 
 This project aims to reproduce the results of the paper **"Partial Differential Operator Based Equivariant Convolutions"** by Zhengyang Shen
 
