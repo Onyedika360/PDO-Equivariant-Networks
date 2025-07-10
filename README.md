@@ -6,7 +6,11 @@ This project aims to reproduce the results of the paper **"Partial Differential 
 
 # Introduction
 This project reproduces the results of the paper **"Partial Differential Operator Based Equivariant Convolutions"** by Zhengyang Shen, using PyTorch and the MNIST dataset. It explores the role of symmetries in image datasets by implementing convolutional networks that are equivariant to transformations from the dihedral (D4) and cyclic groups. By leveraging these structured symmetries, the model builds more robust and generalizable representations for image classification tasks. This reproduction serves both to validate the paper's findings and to deepen understanding of symmetry-based architectures in deep learning.
+### Model results
+**Accuracy**: 0.94
+**F1-score**: 0.94
 
+![Model Sumary](images/PDO_46_MODELSUMMARY.png)
 
 ## Installation
 
@@ -22,6 +26,7 @@ To get started with the Partial Differential Operator-Based Equivariant CNNs pro
 ### 🔹 Dataset
 
 The dataset used is a preprocessed MNIST file containing group-equivariant transformations. It is hosted on Hugging Face
+![Data after transformation](images/mnistdata.png)
 
 - **Repo**: `onyedika360/MNIST_D4_and_P4M_transformation`
 - **File**: `P4MUPDATED.pkl`
@@ -34,6 +39,7 @@ The dataset used is a preprocessed MNIST file containing group-equivariant trans
   - 50,000 testing samples
 
 📌 **Note**: To avoid misclassification due to symmetry ambiguity, only **translation transformations** were applied to digits **6** and **9**. All other digits were transformed using both dihedral (D4) and cyclic group symmetries.
+![6 and 9 transformation](images/6and9.png)
 
 To load the data:
 ```python
