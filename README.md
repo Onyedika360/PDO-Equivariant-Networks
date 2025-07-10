@@ -21,9 +21,10 @@ To get started with the Partial Differential Operator-Based Equivariant CNNs pro
     
 ### 🔹 Dataset
 
-The dataset used is a preprocessed MNIST file containing group-equivariant transformations. It is stored as a pickle file:
+The dataset used is a preprocessed MNIST file containing group-equivariant transformations. It is hosted on Hugging Face
 
-- **Path**: `data/P4MUPDATED.pkl`
+- **Repo**: `onyedika360/MNIST_D4_and_P4M_transformation`
+- **File**: `P4MUPDATED.pkl`
 - **Structure**:
   - `images`: Transformed MNIST image data
   - `labels`: Corresponding labels
@@ -36,13 +37,19 @@ The dataset used is a preprocessed MNIST file containing group-equivariant trans
 
 To load the data:
 ```python
+from huggingface_hub import hf_hub_download
 import pickle
 
-with open("data/P4MUPDATED.pkl", "rb") as f:
+# Download the file from Hugging Face Hub
+file_path = hf_hub_download(repo_id="onyedika360/MNIST_D4_and_P4M_transformation", filename="P4MUPDATED.pkl")
+
+# Load the data
+with open(file_path, "rb") as f:
     dataset = pickle.load(f)
 
 images = dataset["images"]
 labels = dataset["labels"]
+
 ```
 
 ### 🔹 Custom Transformations (Optional)
